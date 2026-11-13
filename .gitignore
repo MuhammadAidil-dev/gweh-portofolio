@@ -15,7 +15,9 @@ logs/
 *.log
 npm-debug.log*
 
-# environment local overrides (template .env.* tetap ikut scaffold via CLI, local tidak)
+# environment (keep the example file)
+.env.*
+!.env.example
 .env*.local
 
 # os / editor

@@ -1,20 +1,18 @@
-# gweh-portofolio
+﻿# Portofolio Muhammad Aidil
 
-Feature-based: `app/`, `features/<fitur>/`, `components/ui/`, `lib/`, `stores/`.
-Butuh Node >= 20.9.
+Website portofolio pribadi untuk memperkenalkan profil, keahlian, pengalaman, layanan, dan proyek yang pernah saya kerjakan.
 
-## Scripts
+## Menjalankan lokal
 
-- `npm run dev` (port 3001) / `build` / `start` / `lint` / `test` / `typecheck`
+```bash
+npm install
+npm run dev
+```
 
-## Env
+## Struktur utama
 
-Copy `.env.example` → `.env.development` / `.env.production`. Wajib `NEXT_PUBLIC_API_URL`
-(base URL backend, tanpa trailing slash dan tanpa prefix; default dev `http://localhost:3000`).
+- `features/portfolio/components/` berisi komponen setiap bagian halaman.
+- `features/portfolio/data/portfolio-content.ts` berisi daftar keahlian, layanan, dan alur kerja.
+- `app/portfolio.css` berisi aksen visual khusus di atas Tailwind CSS.
+- `public/` berisi foto profil, tangkapan layar proyek, dan sertifikat.
 
-## Auth
-
-Kontrak dengan backend template (`/auth/login`, `/auth/refresh`, `/auth/logout`, `/auth/me`).
-Access token hanya di memory Zustand. Refresh token httpOnly cookie, dikirim lewat
-`credentials: "include"`. Tanpa localStorage. `proxy.ts` (pengganti `middleware.ts` di Next 16)
-menjaga route `/dashboard` berdasarkan cookie `refreshToken`.
